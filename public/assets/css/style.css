@@ -1,5 +1,5 @@
 body { 
-    background: #e2a7c4 url('../img/bg.png') !important;
+    background: #e2a7c4 url('../img/bg.png') repeat !important;
     font: 1.5rem/150% 'Work Sans', sans-serif;
 }
 
@@ -14,10 +14,10 @@ h1 { font-size: 120px; }
 h2 { font-size: 50px; }
 
 img {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     object-fit: cover; 
-    margin: 50px auto;
+    margin: 30px auto;
 }
 
 p {
@@ -34,7 +34,7 @@ p {
 .burger-box {
     position: relative;
     width: 100%;
-    margin-top: 100px; 
+    margin-top: 50px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,9 +63,35 @@ p {
                  1px -1px #a84d7c,
                  -1px 1px #a84d7c,
                  -1px -1px #a84d7c;
+    text-align: center; 
+    margin: 30px auto; 
 }
 
 .btn {
     font: 1.7rem/100% 'Work Sans', sans-serif;
     background-color: #f090c1; 
+    border: 1px solid #a84d7c; 
+}
+
+li {
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+
+li::before {
+    content: '\2729 ';
+    display: inline !important; 
+    color: white;
+    text-shadow: 1px 1px #a84d7c,
+                 1px -1px #a84d7c,
+                 -1px 1px #a84d7c,
+                 -1px -1px #a84d7c;
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+#burger-devour {
+    font-size: 1rem; 
+    color: white;
+    border: 1px solid #a84d7c; 
 }

@@ -55,7 +55,21 @@ let orm = { // selectAll function
 
             console.log(queryString);
 
-            connection.query(queryString, vals, (err, result) => {
+            connection.query(queryString, (err, result) => {
+                if (err) throw err;
+                cb(result);
+            });
+    },
+
+    // deleteOne function
+    deleteOne: (table, condition, cb) => {
+        let queryString = 'DELETE FROM ' + table;
+            queryString += ' WHERE ';
+            queryString += condition;
+
+            console.log(queryString);
+
+            connection.query(queryString, (err, result) => {
                 if (err) throw err;
                 cb(result);
             });

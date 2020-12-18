@@ -1,7 +1,7 @@
 <div class="jumbotron">
 
     <div class="burger-box">
-        <img src="/assets/img/burger.png">
+        <a href='/'><img src="/assets/img/burger.png"></a>
 
         <h1 class="burger-title">Eat Da Burger !</h1>
     </div>
@@ -17,15 +17,15 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <h2>These sound good:</h2>
+            <h2 class="burger-subtitle">These sound good:</h2>
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
                 <div>
                     <form action="/burger/{{this.id}}?_method=PUT" method="POST">
                     <input type="hidden" type="text" value={{this.id}}>
-                        <li class="list"><p>{{this.burger_name}}
-                        <button type="submit" class="btn" id="burger-devour"><i class="fas fa-teeth-open fa-2x"></i></button></p></li>
+                        <li class="list">{{this.burger_name}}
+                        <button type="submit" class="btn" id="burger-devour"> devour </button></li>
                     </form>
                 </div>
                 {{/unless}}
@@ -33,12 +33,12 @@
             </ul>
         </div>
         <div class="col-6" id="burgers-devoured">
-            <h2 class="text-center">These were good:</h2>
+            <h2 class="burger-subtitle">These were good:</h2>
             <ul>
                 <div>
                 {{#each burgers}}
                 {{#if this.devoured}}
-                    <li class="list"><p>{{this.burger_name}}</p></li>
+                    <li class="list">{{this.burger_name}}</li>
                 {{/if}}
                 {{/each}}
                 </div>
