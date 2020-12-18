@@ -28,6 +28,7 @@ p {
     width: 90%;
     margin: 0 auto;
     text-align: center; 
+    background: transparent; 
 }
 
 .burger-box {
@@ -62,4 +63,9 @@ p {
                  1px -1px #a84d7c,
                  -1px 1px #a84d7c,
                  -1px -1px #a84d7c;
+}
+
+.btn {
+    font: 1.7rem/100% 'Work Sans', sans-serif;
+    background-color: #f090c1; 
 }
