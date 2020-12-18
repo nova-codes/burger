@@ -71,15 +71,23 @@ p {
     font: 1.7rem/100% 'Work Sans', sans-serif;
     background-color: #f090c1; 
     border: 1px solid #a84d7c; 
+    transition: all .5s ease; 
+    color: white; 
 }
 
 li {
     list-style-type: none;
     font-size: 1.5rem;
+    font-weight: bold; 
+    color: white;
+    text-shadow: 1px 1px #a84d7c,
+                 1px -1px #a84d7c,
+                 -1px 1px #a84d7c,
+                 -1px -1px #a84d7c;
 }
 
 li::before {
-    content: '\2729 ';
+    content: '\2729';
     display: inline !important; 
     color: white;
     text-shadow: 1px 1px #a84d7c,
@@ -92,6 +100,15 @@ li::before {
 
 #burger-devour {
     font-size: 1rem; 
+    font-weight: 400; 
     color: white;
     border: 1px solid #a84d7c; 
+    margin-left: 20px; 
 }
+
+#burger-devour:hover,
+.btn:hover { color: #a84d7c; }
+
+.burger-input { 
+    border: 1px solid #a84d7c; 
+    padding: 3px; }
