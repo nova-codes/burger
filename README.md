@@ -26,6 +26,7 @@ To try this application for yourself, please open the below link in your web bro
 - [method-override](https://www.npmjs.com/package/method-override)
 
 ## ☆ Previews
-
+![Preview of Application](https://github.com/nova-codes/dream-burger-simulator/blob/main/public/assets/img/preview.png?raw=true)
 
 ## ☆ Contact
+:e-mail: hgelliott90@gmail.com
