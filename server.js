@@ -1,30 +1,24 @@
 const express = require('express');
-
-var PORT = process.env.PORT || 8080;
-
-var app = express();
+const PORT = process.env.PORT || 8080;
+const app = express();
+const routes = require('./controllers/burgers_controller.js');
+const expressHandlebars = require('express-handlebars');
+const methodOverride = require('method-override');
 
 // serve static content for the app
 app.use(express.static('public'));
 
 // parse as JSON
-app.use(express.urlencoded({
-    extended: true
-}));
-
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // set handlebars
-var expressHandlebars = require('express-handlebars');
-
-app.engine('handlebars', expressHandlebars({
-    defaultLayout: 'main'
-}));
-
+app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+app.use(methodOverride('_method')); 
+
 // import routes & allow the server to access them
-var routes = require('./controllers/burgers_controller.js');
 app.use(routes);
 
 // start the server
