@@ -1,0 +1,65 @@
+body { 
+    background: #e2a7c4 url('../img/bg.png') !important;
+    font: 1.5rem/150% 'Work Sans', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Yellowtail', cursive; 
+    line-height: 120%;
+    font-weight: normal !important;
+}
+
+h1 { font-size: 120px; }
+
+h2 { font-size: 50px; }
+
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover; 
+    margin: 50px auto;
+}
+
+p {
+    font: 1.5rem/150% 'Work Sans', sans-serif;
+}
+
+.jumbotron {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+.burger-box {
+    position: relative;
+    width: 100%;
+    margin-top: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger-title {
+    position: absolute; 
+    color: white;
+    text-shadow: 2px 2px #a84d7c,
+                 2px -2px #a84d7c,
+                 -2px 2px #a84d7c,
+                 -2px -2px #a84d7c,
+                 5px 5px #f090c1, 
+                 7px 7px white,
+                 9px 9px #a84d7c; 
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -ms-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+}
+
+.burger-subtitle {
+    color: white;
+    text-shadow: 1px 1px #a84d7c,
+                 1px -1px #a84d7c,
+                 -1px 1px #a84d7c,
+                 -1px -1px #a84d7c;
+}

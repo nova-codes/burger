@@ -1,9 +1,12 @@
 <div class="jumbotron">
-    <img src="/assets/img/burger.png">
-    <div class="title-box">
-    <h1 class="title-text">~ E a T · d A · b U r G e R ~</h1>
+
+    <div class="burger-box">
+        <img src="/assets/img/burger.png">
+
+        <h1 class="burger-title">Eat Da Burger !</h1>
     </div>
-    <h2 class="subtitle">Enter the name of a burger you want to try!</h2>
+
+    <h2 class="burger-subtitle">Enter the name of a burger you want to try!</h2>
 
     <form action="/burgers" class="create-form" method="POST">
             <input type="text" id="enter-burger" name="burger_name" class="form-control-lg">
@@ -14,28 +17,28 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <h2 class="text-center">DREAM BURGERS:</h2>
+            <h2>These sound good:</h2>
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
                 <div>
-                <form action="/burger/{{this.id}}?_method=PUT" method="POST">
-                <input type="hidden" type="text" value={{this.id}}>
-                <li class="list"><p>{{this.burger_name}}
-                <button type="submit" class="btn" id="burger-devour"><i class="fas fa-teeth-open fa-2x"></i></button></p></li>
-                </form>
+                    <form action="/burger/{{this.id}}?_method=PUT" method="POST">
+                    <input type="hidden" type="text" value={{this.id}}>
+                        <li class="list"><p>{{this.burger_name}}
+                        <button type="submit" class="btn" id="burger-devour"><i class="fas fa-teeth-open fa-2x"></i></button></p></li>
+                    </form>
                 </div>
                 {{/unless}}
                 {{/each}}
             </ul>
         </div>
         <div class="col-6" id="burgers-devoured">
-            <h2 class="text-center">DEVOURED BURGERS:</h2>
+            <h2 class="text-center">These were good:</h2>
             <ul>
                 <div>
                 {{#each burgers}}
                 {{#if this.devoured}}
-                <li class="list"><p>{{this.burger_name}}</p></li>
+                    <li class="list"><p>{{this.burger_name}}</p></li>
                 {{/if}}
                 {{/each}}
                 </div>
