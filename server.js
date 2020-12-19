@@ -2,7 +2,7 @@ const express = require('express');
 const PORT = process.env.PORT || 8080;
 const app = express();
 const routes = require('./controllers/burgers_controller.js');
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const expressHandlebars = require('express-handlebars');
 const methodOverride = require('method-override');
 

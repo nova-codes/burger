@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.post('/burger', (req, res) => {
+router.post('/burgers', (req, res) => {
     burger.insertOne(['burger_name'],[req.body.burger_name], () => {
         res.redirect('/');
     });
